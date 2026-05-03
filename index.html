@@ -2,23 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Simple Quiz App</title>
+    <title>Quiz App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="quiz-container">
+<div id="quiz-wrapper">
+  <div id="quiz-card">
+
+    <!-- Always visible header -->
     <div id="quiz-header">
-        <h1 id="quiz-title">Quiz App</h1>
-        <div id="score-counter">Score: <span id="score">0</span> / <span id="total">5</span></div>
+      <div id="quiz-label">Quiz App</div>
+      <div id="score-badge">
+        <span id="score">0</span><span id="score-sep">/</span><span id="total">5</span>
+      </div>
     </div>
-    <div id="progress-bar"><div id="progress-fill"></div></div>
-    <div id="question">Loading question...</div>
-    <div id="answer-buttons" class="btn-grid"></div>
+    <div id="progress-track"><div id="progress-fill"></div></div>
+
+    <!-- Quiz body (hidden on result screen) -->
+    <div id="quiz-body">
+      <div id="question-meta"><span id="question-number">Question 1 of 5</span></div>
+      <div id="question">Loading...</div>
+      <div id="answer-buttons" class="btn-grid"></div>
+      <div id="nav-row">
+        <button id="prev-btn" class="nav-btn" onclick="navigate(-1)" disabled>&#8592; Prev</button>
+        <button id="next-btn" class="nav-btn" onclick="navigate(1)" disabled>Next &#8594;</button>
+      </div>
+    </div>
+
+    <!-- Result screen (hidden until complete) -->
+    <div id="result-screen" style="display:none;">
+      <div id="result-emoji"></div>
+      <h2 id="result-title"></h2>
+      <p id="result-msg"></p>
+      <button id="restart-btn" onclick="restartQuiz()">Try again</button>
+    </div>
+
+  </div>
 </div>
 
-<!-- In a real project: compile script.ts → script.js with tsc -->
 <script src="script.js"></script>
-
 </body>
 </html>
