@@ -8,13 +8,16 @@
 <body>
 
 <div id="quiz-container">
-    <h1 id="quiz-title">Quiz App</h1>
-    <div id="question">Loading question...</div>
-    <div id="answer-buttons" class="btn-grid">
-        <!-- Buttons will be injected here -->
+    <div id="quiz-header">
+        <h1 id="quiz-title">Quiz App</h1>
+        <div id="score-counter">Score: <span id="score">0</span> / <span id="total">5</span></div>
     </div>
+    <div id="progress-bar"><div id="progress-fill"></div></div>
+    <div id="question">Loading question...</div>
+    <div id="answer-buttons" class="btn-grid"></div>
 </div>
 
+<!-- In a real project: compile script.ts → script.js with tsc -->
 <script src="script.js"></script>
 
 </body>
