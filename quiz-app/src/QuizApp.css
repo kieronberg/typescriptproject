@@ -138,3 +138,67 @@
     cursor: pointer;
     margin-top: 1rem;
 }
+
+#json-paste-panel {
+    margin-bottom: 1.25rem;
+}
+
+#toggle-paste-btn {
+    background: none;
+    border: 1.5px dashed var(--border);
+    color: var(--text-muted);
+    border-radius: var(--radius);
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    width: 100%;
+}
+
+#toggle-paste-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+#paste-area {
+    margin-top: 10px;
+}
+
+.paste-hint {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 0 0 8px;
+}
+
+#paste-area textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 10px 12px;
+    font-family: monospace;
+    font-size: 0.8rem;
+    resize: vertical;
+}
+
+#paste-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+#load-json-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+#clear-json-btn {
+    background: none;
+    border: 1.5px solid var(--border);
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.paste-error   { color: var(--wrong);   font-size: 0.82rem; margin-top: 6px; }
+.paste-success { color: var(--correct); font-size: 0.82rem; margin-top: 6px; }
